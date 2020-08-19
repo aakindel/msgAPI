@@ -1,3 +1,8 @@
+@import "materialize/components/color-variables";
+$primary-color: color("blue", "lighten-2") !default;
+$secondary-color: color("blue", "base") !default;
+@import "materialize";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

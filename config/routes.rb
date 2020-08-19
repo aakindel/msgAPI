@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'messages#index'
+  
+  resources :messages, except: [:edit, :destroy]
+
+  get '/messages/:id/edit', to: 'messages#edit', as: 'edit'
+  delete '/messages/:id', to: 'messages#destroy', as: 'destroy'
+
 end

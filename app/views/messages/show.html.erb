@@ -1,0 +1,18 @@
+<div class="container">
+    <%= link_to "Messages", messages_path %>
+    <%= link_to "Create Message", new_message_path %>
+</div>
+
+<div class="container">
+    <div>
+        <h1><%= @message.title%></h1>
+        <p><%= @message.body %></p>
+        
+        <hr>
+
+        <%= link_to "Back", messages_path %>
+        <%= link_to "Edit", edit_path %>
+        <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
+</div>

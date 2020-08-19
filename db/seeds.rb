@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+for index in 1..3 do
+    Message.create({
+        title: "Message #{index}",
+        body: "This is message #{index}!"
+    })
+end

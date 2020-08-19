@@ -1,3 +1,3 @@
 # README
 
-Ruby on Rails CRUD message application with PostreSQL database.
+Ruby on Rails CRUD message application with PostgreSQL database.

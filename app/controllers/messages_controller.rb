@@ -2,6 +2,11 @@ class MessagesController < ApplicationController
     def index
         @messages = Message.all
     end
+
+    def hashtags
+        @find_tag = Hashtag.find_by(name: params[:name])
+        @messages = @find_tag.messages
+    end
   
     def new
         @message = Message.new

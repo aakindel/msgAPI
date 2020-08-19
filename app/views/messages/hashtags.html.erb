@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag "messages/index" %>
+
+<%= render partial: "nav" %>
+
+<div class="container">
+    <% @messages.each do |message| %>
+        <%= link_to message_path(message.id), class: 'msg_card' do %>
+            <div class="hoverable z-depth-1 msg">
+                <%= render partial: "msg_content", locals: {message: message} %>
+            </div>
+        <% end %>
+
+    <% end %>
+
+</div>

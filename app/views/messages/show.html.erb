@@ -1,15 +1,23 @@
+<%= stylesheet_link_tag "messages/index" %>
+
 <%= render partial: "nav" %>
 
 <div class="container">
-    <div>
-        <h1><%= @message.title%></h1>
-        <p><%= @message.body %></p>
-        
-        <hr>
+    <div class="msg_card">
+        <div class="z-depth-1 msg">
+            <p class="msg_title"><%= @message.title%></p>
 
-        <%= link_to "Back", messages_path %>
-        <%= link_to "Edit", edit_path %>
-        <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <!-- display the message -->
+            <p><%= @message.body %></p>
+
+            <div class="divider"></div>
+
+            <div class="options">
+                <%= link_to "Back", messages_path %>
+                <%= link_to "Edit", edit_path %>
+                <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+            
+        </div>
     </div>
-
 </div>

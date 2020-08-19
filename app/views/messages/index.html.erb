@@ -4,9 +4,16 @@
 
 <div class="container">
     <% @messages.each do |message| %>
-        <div>
-            <p ><%= message.title%></p>
-            <p><%= message.body %></p>
-        </div>
-    <% end %>   
+    
+        <%= link_to message_path(message.id), class: 'msg_card' do %>
+            <div class="hoverable z-depth-1 msg">
+                <p class="msg_title"><%= message.title%></p>
+
+                <!-- display the message -->
+                <p><%= message.body %></p>
+                
+            </div>
+        <% end %>
+    <% end %>
+    
 </div>

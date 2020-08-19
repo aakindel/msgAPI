@@ -1,6 +1,3 @@
 <%= render partial: "nav" %>
 
-<div class="container">
-    <h1>Create a Message</h1>
-    <%= render partial: "form", locals: {submit_msg: "Create Message"} %>
-</div>
+<%= render partial: "form", locals: {title: "Create a Message", submit_msg: "Create Message"} %>

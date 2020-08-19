@@ -1,0 +1,19 @@
+<style>
+    nav {
+        margin-bottom: 20px;
+    }
+    nav .brand-logo {
+        padding-left: 15px;
+    }
+</style>
+
+<nav>
+    <div class="nav-wrapper">
+        <div class="container">
+            <%= link_to "Messages", messages_path, class: "brand-logo" %>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <%= link_to "Create Message", new_message_path %>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -5,14 +5,5 @@
 
 <div class="container">
     <h1>Edit Message</h1>
-
-    <%= form_for @message do |f| %>
-        <%= f.label :title %><br />
-        <%= f.text_field :title, maxlength: 141 %><br /><br />
-        <%= f.label :body %><br />
-        <%= f.text_field :body, maxlength: 141 %><br />
-        
-        <%= f.submit "Update Message" %>
-
-    <% end %>
+    <%= render partial: "form", locals: {submit_msg: "Update Message"} %>
 </div>

@@ -5,10 +5,7 @@
 <div class="container">
     <div class="msg_card">
         <div class="z-depth-1 msg">
-            <p class="msg_title"><%= @message.title%></p>
-
-            <!-- display the message -->
-            <p><%= @message.body %></p>
+            <%= render partial: "msg_content", locals: {message: @message} %>
 
             <div class="divider"></div>
 

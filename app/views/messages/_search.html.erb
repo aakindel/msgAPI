@@ -1,21 +1,21 @@
 <div class="container search_container">
     <%= search_form_for search_func, url: search_path, method: :get, html: { :class => 'search_form' } do |f| %>
         <div class="row">
-            <div class="input-field col s9 m4">
+            <div class="input-field col s9 m10 l4 xl4">
                 <%= f.label :title_cont, "Title contains", class: 'active' %>
                 <%= f.text_field :title_cont %>
             </div>
             
-            <div class="input-field col s3 m1">
+            <div class="input-field col s3 m2 l1 xl1">
                 <%= f.submit "Search ", class: "btn blue search_button" %>
             </div>
 
-            <div class="input-field col s9 m4 offset-m2">
+            <div class="input-field col s9 m10 l4 offset-l1 offset-xl2">
                 <%= f.label :body_cont, "Body contains", class: 'active' %>
                 <%= f.text_field :body_cont %>
             </div>
             
-            <div class="input-field col s3 m1">
+            <div class="input-field col s3 m2 l1 xl1">
                 <%= f.submit "Search ", class: "btn blue search_button" %>
             </div>
         </div>

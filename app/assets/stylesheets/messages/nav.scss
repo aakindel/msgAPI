@@ -1,3 +1,5 @@
+/* HEADER NAV STYLES */
+
 .nav_header {
     margin-bottom: 20px;
 }
@@ -5,6 +7,8 @@
 nav .brand-logo {
     padding-left: 15px;
 }
+
+/* BREADCRUMB NAV STYLES */
 
 nav.clean {
     background: none;
@@ -27,4 +31,18 @@ nav.clean a.active {
 
 .breadcrumbs_row {
     margin-bottom: 0;
+}
+
+/* SEARCH FORM STYLES */
+
+.search_container {
+    padding-left: 5px;
+}
+
+.search_form {
+    margin-top: 10px;
+}
+
+.search_button {
+    margin-top: 10px;
 }

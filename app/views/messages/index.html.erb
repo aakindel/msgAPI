@@ -4,7 +4,7 @@
 <%= render partial: "nav" %>
 <%= render partial: "breadcrumbs" %>
 
-<div class="container">
+<div class="container msg_container">
     <% @messages.each do |message| %>
         <div class="hoverable z-depth-1 msg_card">
             <%= link_to message_path(message.id), class: 'msg_link' do %>

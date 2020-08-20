@@ -4,11 +4,15 @@
 
 <div class="container">
     <% @messages.each do |message| %>
-        <%= link_to message_path(message.id), class: 'msg_card' do %>
-            <div class="hoverable z-depth-1 msg">
+        <div class="hoverable z-depth-1 msg_card">
+            <%= link_to message_path(message.id), class: 'msg_link' do %>
                 <%= render partial: "msg_content", locals: {message: message} %>
-            </div>
-        <% end %>
+            <% end %>
+            <% if message.hashtags[0] %>
+                <div class="divider"></div>
+                <%= render partial: "tag_content", locals: {message: message} %>
+            <% end %>
+        </div>
 
     <% end %>
 

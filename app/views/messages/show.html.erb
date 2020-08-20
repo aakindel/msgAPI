@@ -3,18 +3,20 @@
 <%= render partial: "nav" %>
 
 <div class="container">
-    <div class="msg_card">
-        <div class="z-depth-1 msg">
+    <div class="z-depth-1 msg_card show_msg_card">
+        <div class="msg_cont">
             <%= render partial: "msg_content", locals: {message: @message} %>
+        </div>
+        <% if @message.hashtags[0] %>
+            <%= render partial: "tag_content", locals: {message: @message} %>
+        <% end %>
 
-            <div class="divider"></div>
+        <div class="divider"></div>
 
-            <div class="options">
-                <%= link_to "Back", messages_path %>
-                <%= link_to "Edit", edit_path %>
-                <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </div>
-            
+        <div class="options">
+            <%= link_to "Back", messages_path %>
+            <%= link_to "Edit", edit_path %>
+            <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
     </div>
 </div>

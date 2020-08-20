@@ -1,0 +1,12 @@
+<!-- get the hashtags from the message -->
+<% @hashtags = []%>
+<% tag_ids = ActiveRecord::Base.connection.execute(
+    "SELECT hashtag_id FROM message_hashtags WHERE message_id = #{message.id} ORDER BY hash_count DESC;").values %>
+<% tag_ids.each {|tag_id| @hashtags.push(ActiveRecord::Base.connection.execute("SELECT name FROM hashtags WHERE id = #{tag_id[0]};").values[0][0])} %>
+
+<!-- display the hashtags -->
+<p class="hashtags">
+    <% @hashtags.each do |hashtag| %>
+        <%= link_to "##{hashtag}", tag_path(hashtag), class: "hashtag_link" %>
+    <% end %>
+</p>

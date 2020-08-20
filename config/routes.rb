@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 
   get '/messages/:id/edit', to: 'messages#edit', as: 'edit'
 
-  get '/messages/tags/:name', to: 'messages#hashtags'
+  get '/messages/tags/:name', to: 'messages#hashtags', as: 'tag'
 
 end

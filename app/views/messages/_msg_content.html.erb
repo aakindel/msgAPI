@@ -1,18 +1,5 @@
-<!-- get the hashtags from the message -->
-<% @hashtags = []%>
-<% tag_ids = ActiveRecord::Base.connection.execute(
-    "SELECT hashtag_id FROM message_hashtags WHERE message_id = #{message.id} ORDER BY hash_count DESC;").values %>
-<% tag_ids.each {|tag_id| @hashtags.push(ActiveRecord::Base.connection.execute("SELECT name FROM hashtags WHERE id = #{tag_id[0]};").values[0][0])} %>
-
 <!-- display the message title -->
 <p class="msg_title"><%= message.title%></p>
 
 <!-- display the message -->
-<p><%= message.body %></p>
-
-<!-- display the hashtags -->
-<p class="hashtags">
-    <% @hashtags.each do |hashtag| %>
-        <span><%= "##{hashtag}" %></span>
-    <% end %>
-</p>
+<p class="msg_body"><%= message.body %></p>

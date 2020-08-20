@@ -1,0 +1,30 @@
+.nav_header {
+    margin-bottom: 20px;
+}
+
+nav .brand-logo {
+    padding-left: 15px;
+}
+
+nav.clean {
+    background: none;
+    box-shadow: none;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+nav.clean .breadcrumb {
+    color: rgba(0,0,0,1);
+}
+
+nav.clean .breadcrumb:before {
+    color: rgba(0,0,0,0.7);
+}
+
+nav.clean a.active {
+    font-weight: 700;
+}
+
+.breadcrumbs_row {
+    margin-bottom: 0;
+}

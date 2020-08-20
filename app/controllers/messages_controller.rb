@@ -4,8 +4,8 @@ class MessagesController < ApplicationController
     end
 
     def hashtags
-        @find_tag = Hashtag.find_by(name: params[:name])
-        @messages = @find_tag.messages
+        @hashtag = Hashtag.find_by(name: params[:name])
+        @messages = @hashtag.messages
     end
   
     def new

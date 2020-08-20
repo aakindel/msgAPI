@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row breadcrumbs_row">
+        <nav class="clean">
+            <%= link_to "Messages", messages_path, class: "breadcrumb #{'active' if current_page?(messages_path) or current_page?(root_path)}" %>
+
+            <% if current_page?(controller: 'messages', action: 'new') %>
+                <%= link_to 'New', new_message_path, class: "breadcrumb #{'active' if current_page?(controller: 'messages', action: 'new')}" %>
+            <% end %>
+
+            <% if @message and @message.id != nil %>
+                <%= link_to "#{@message.title}", message_path(@message), class: "breadcrumb #{'active' if current_page?(controller: 'messages', action: 'show')}" %>
+                
+                <% if current_page?(controller: 'messages', action: 'edit') %>
+                    <%= link_to "Edit", edit_path(@message), class: "breadcrumb #{'active' if current_page?(controller: 'messages', action: 'edit')}" %>
+                <% end %>
+
+            <% end %>
+
+            <% if @hashtag %>
+                <% if current_page?(controller: 'messages', action: 'hashtags') %>
+                    <%= link_to "Tags", messages_path, class: "breadcrumb" %>
+                    <%= link_to "#{@hashtag.name}", tag_path(@hashtag), class: "breadcrumb #{'active' if current_page?(controller: 'messages', action: 'hashtags')}" %>
+                <% end %>
+            <% end %>
+
+        </nav>
+    </div>
+</div>

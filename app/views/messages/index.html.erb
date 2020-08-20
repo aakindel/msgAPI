@@ -3,6 +3,7 @@
 
 <%= render partial: "nav" %>
 <%= render partial: "breadcrumbs" %>
+<%= render partial: "search", locals: {search_func: @search, search_path: messages_path}%>
 
 <div class="container msg_container">
     <% @messages.each do |message| %>

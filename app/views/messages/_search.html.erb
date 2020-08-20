@@ -1,5 +1,5 @@
 <div class="container search_container">
-    <%= search_form_for search_func, html: { :class => 'search_form' } do |f| %>
+    <%= search_form_for search_func, url: search_path, method: :get, html: { :class => 'search_form' } do |f| %>
         <div class="row">
             <div class="input-field col s9 m4">
                 <%= f.label :title_cont, "Title contains", class: 'active' %>
